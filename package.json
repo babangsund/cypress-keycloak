@@ -6,9 +6,13 @@
   "name": "cypress-keycloak",
   "description": "Cypress commands for Keycloak",
   "repository": "https://github.com/babangsund/cypress-keycloak",
+  "peerDependencies": {
+    "cypress": "^3.6.0"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.7.0",
     "@typescript-eslint/parser": "^2.7.0",
+    "cypress": "^3.6.0",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "prettier": "^1.19.1"
