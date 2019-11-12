@@ -1,0 +1,8 @@
+{
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "babangsund",
+  "name": "cypress-keycloak",
+  "description": "Cypress commands for Keycloak",
+  "repository": "https://github.com/babangsund/cypress-keycloak"
+}

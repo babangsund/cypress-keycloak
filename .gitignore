@@ -1,0 +1,13 @@
+# dependencies
+node_modules/
+
+# production
+dist/
+
+# misc
+.DS_STORE
+.rgignore
+.env
+*.swp
+*.swo
+*~
