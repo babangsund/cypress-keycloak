@@ -5,5 +5,8 @@
   "author": "babangsund",
   "name": "cypress-keycloak",
   "description": "Cypress commands for Keycloak",
-  "repository": "https://github.com/babangsund/cypress-keycloak"
+  "repository": "https://github.com/babangsund/cypress-keycloak",
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  }
 }
