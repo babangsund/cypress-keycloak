@@ -1,11 +1,16 @@
 {
   "license": "MIT",
   "version": "0.1.0",
-  "main": "index.js",
   "author": "babangsund",
+  "main": "dist/index.js",
   "name": "cypress-keycloak",
+  "module": "dist/index.esm.js",
   "description": "Cypress commands for Keycloak",
   "repository": "https://github.com/babangsund/cypress-keycloak",
+  "scripts": {
+    "build": "NODE_ENV=production rollup -c",
+    "watch": "NODE_ENV=development rollup -c -w"
+  },
   "peerDependencies": {
     "cypress": "^3.6.0"
   },
@@ -16,6 +21,10 @@
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "prettier": "^1.19.1",
+    "rollup": "^1.27.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-terser": "^5.1.2",
+    "rollup-plugin-typescript": "^1.0.1",
     "typescript": "^3.7.2"
   }
 }
