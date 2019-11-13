@@ -15,6 +15,7 @@
     "cypress": "^3.6.1",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.2"
   }
 }
