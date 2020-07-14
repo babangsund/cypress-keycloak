@@ -12,6 +12,7 @@ declare namespace Cypress {
     username: string;
     password: string;
     client_id: string;
+    path_prefix?: string;
     redirect_uri: string;
   }
   interface Chainable {

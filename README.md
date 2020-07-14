@@ -40,6 +40,7 @@ Two `cy` commands have been added:
   - `password`: string
   - `client_id`: string
   - `redirect_uri`: string
+  - `path_prefix`?: string = "auth"
 
 ### Example:
 
