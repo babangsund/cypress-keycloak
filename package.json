@@ -9,21 +9,23 @@
   "repository": "https://github.com/babangsund/cypress-keycloak",
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
-    "watch": "NODE_ENV=development rollup -c -w"
+    "watch": "NODE_ENV=development rollup -c -w",
+    "prettier": "prettier --write 'src/**'",
+    "lint": "eslint src/"
   },
   "peerDependencies": {
     "cypress": "^3.6.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.14.0",
-    "@typescript-eslint/parser": "^2.14.0",
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
     "cypress": "^3.8.1",
-    "eslint": "^6.8.0",
+    "eslint": "^7.4.0",
     "eslint-config-prettier": "^6.9.0",
-    "prettier": "^1.19.1",
-    "rollup": "^1.27.14",
+    "prettier": "^2.0.5",
+    "rollup": "^2.21.0",
     "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-terser": "^5.1.3",
+    "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-typescript": "^1.0.1",
     "typescript": "^3.7.4"
   }

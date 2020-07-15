@@ -2,7 +2,15 @@ import createUUID from './createUUID';
 
 Cypress.Commands.add(
   'login',
-  ({ root, realm, username, password, client_id, redirect_uri, path_prefix = "auth" }) =>
+  ({
+    root,
+    realm,
+    username,
+    password,
+    client_id,
+    redirect_uri,
+    path_prefix = 'auth',
+  }) =>
     cy
       .request({
         url: `${root}/${path_prefix}/realms/${realm}/protocol/openid-connect/auth`,
@@ -16,7 +24,7 @@ Cypress.Commands.add(
           response_mode: 'fragment',
         },
       })
-      .then(response => {
+      .then((response) => {
         const html = document.createElement('html');
         html.innerHTML = response.body;
 
