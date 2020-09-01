@@ -13,7 +13,9 @@ Cypress.Commands.add(
   }) =>
     cy
       .request({
-        url: `${root}/${path_prefix}/realms/${realm}/protocol/openid-connect/auth`,
+        url: `${root}${
+          path_prefix ? `/${path_prefix}` : ''
+        }/realms/${realm}/protocol/openid-connect/auth`,
         qs: {
           client_id,
           redirect_uri,
