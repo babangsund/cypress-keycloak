@@ -38,8 +38,8 @@ Cypress.Commands.add(
             url: form[0].action,
             followRedirect: false,
             body: {
-              username: username,
-              password: password,
+              username,
+              password,
             },
           });
       })
