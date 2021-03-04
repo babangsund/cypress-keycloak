@@ -15,6 +15,10 @@ declare namespace Cypress {
     path_prefix?: string;
     redirect_uri: string;
   }
+  interface LoginOTP extends Login {
+    otp_secret: string;
+    otp_credential_id?: string | null;
+  }
   interface Chainable {
     logout({ root, realm, redirect_uri }: Logout): Chainable;
     login({
@@ -25,5 +29,17 @@ declare namespace Cypress {
       client_id,
       redirect_uri,
     }: Login): Chainable;
+    loginOTP({
+      root,
+      realm,
+      username,
+      password,
+      client_id,
+      redirect_uri,
+      otp_secret
+    }: LoginOTP): Chainable;
   }
 }
+
+// in case of using TypeScript this needs to be defined for generation of the OTP
+declare namespace 'cypress-otp'
