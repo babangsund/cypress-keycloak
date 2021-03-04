@@ -20,6 +20,7 @@
     "@typescript-eslint/eslint-plugin": "^3.6.1",
     "@typescript-eslint/parser": "^3.6.1",
     "cypress": "^3.8.1",
+    "cypress-otp": "^1.0.3",
     "eslint": "^7.4.0",
     "eslint-config-prettier": "^6.9.0",
     "prettier": "^2.0.5",
