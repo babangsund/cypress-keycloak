@@ -1,6 +1,7 @@
 import createUUID from './createUUID';
 
-Cypress.Commands.add('loginOTP', 
+Cypress.Commands.add(
+  'loginOTP',
   ({
     root,
     realm,
@@ -10,7 +11,7 @@ Cypress.Commands.add('loginOTP',
     redirect_uri,
     path_prefix = 'auth',
     otp_secret,
-    otp_credential_id = null
+    otp_credential_id = null,
   }) =>
     cy
       .request({
@@ -33,43 +34,36 @@ Cypress.Commands.add('loginOTP',
         const isAuthorized = !form.length;
 
         if (!isAuthorized) {
-          return cy.request({
-            form: true,
-            method: 'POST',
-            url: form[0].action,
-            followRedirect: false,
-            body: {
-              username,
-              password,
-            },
-          })
-          .then((otpResponse) => {
-            const html = document.createElement('html');
-            html.innerHTML = otpResponse.body;
-
-            const form = html.getElementsByTagName('form');
-
-            cy.task("generateOTP", otp_secret, { log: false }).then((otp) => {
-              cy.request({
-                form: true,
-                method: 'POST',
-                url: form[0].action,
-                followRedirect: false,
-                body: {
-                  selectedCredentialId: otp_credential_id,
-                  otp,
-                },
-              });
+          return cy
+            .request({
+              form: true,
+              method: 'POST',
+              url: form[0].action,
+              followRedirect: false,
+              body: {
+                username,
+                password,
+              },
             })
-          })
+            .then((otpResponse) => {
+              const html = document.createElement('html');
+              html.innerHTML = otpResponse.body;
+
+              const form = html.getElementsByTagName('form');
+
+              cy.task('generateOTP', otp_secret, { log: false }).then((otp) => {
+                cy.request({
+                  form: true,
+                  method: 'POST',
+                  url: form[0].action,
+                  followRedirect: false,
+                  body: {
+                    selectedCredentialId: otp_credential_id,
+                    otp,
+                  },
+                });
+              });
+            });
         }
       })
 );
-
-
-
-
-
-
-
-
