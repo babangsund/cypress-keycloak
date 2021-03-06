@@ -36,7 +36,7 @@ declare namespace Cypress {
       password,
       client_id,
       redirect_uri,
-      otp_secret
+      otp_secret,
     }: LoginOTP): Chainable;
   }
 }
