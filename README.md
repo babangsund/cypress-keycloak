@@ -42,6 +42,13 @@ Two `cy` commands have been added:
   - `redirect_uri`: string
   - `path_prefix`?: string = "auth"
 - **`cy.loginOTP({ ... })`**:
+  - `root`: string
+  - `realm`: string
+  - `username`: string
+  - `password`: string
+  - `client_id`: string
+  - `redirect_uri`: string
+  - `path_prefix`?: string = "auth"
   - `otp_secret`: string
   - `otp_credential_id`?: string | null = null
 
