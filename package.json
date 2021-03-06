@@ -10,7 +10,7 @@
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
     "watch": "NODE_ENV=development rollup -c -w",
-    "prettier": "prettier --write 'src/**'",
+    "prettier": "prettier --write src/**",
     "lint": "eslint src/"
   },
   "peerDependencies": {
