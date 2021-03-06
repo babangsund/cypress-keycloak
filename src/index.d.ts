@@ -40,6 +40,3 @@ declare namespace Cypress {
     }: LoginOTP): Chainable;
   }
 }
-
-// in case of using TypeScript this needs to be defined for generation of the OTP
-declare namespace 'cypress-otp'
