@@ -51,18 +51,23 @@ Cypress.Commands.add(
 
               const form = html.getElementsByTagName('form');
 
-              cy.task('generateOTP', otp_secret, { log: false }).then((otp) => {
-                cy.request({
-                  form: true,
-                  method: 'POST',
-                  url: form[0].action,
-                  followRedirect: false,
-                  body: {
-                    selectedCredentialId: otp_credential_id,
-                    otp,
-                  },
-                });
-              });
+              cy.task<string>('generateOTP', otp_secret, { log: false }).then(
+                (otp) => {
+                  const body: Record<string, string> = { otp };
+
+                  if (otp_credential_id) {
+                    body.selectedCredentialId = otp_credential_id;
+                  }
+
+                  cy.request({
+                    form: true,
+                    method: 'POST',
+                    url: form[0].action,
+                    followRedirect: false,
+                    body,
+                  });
+                }
+              );
             });
         }
       })
