@@ -33,6 +33,7 @@ Two `cy` commands have been added:
   - `root`: string
   - `realm`: string
   - `redirect_uri`: string
+  - `path_prefix`?: string = "auth"
 - **`cy.login({ ... })`**:
   - `root`: string
   - `realm`: string
