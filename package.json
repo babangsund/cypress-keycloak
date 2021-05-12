@@ -16,6 +16,7 @@
   "peerDependencies": {
     "cypress": "^6.5.0"
   },
+  "types": "src/index.d.ts",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.6.1",
     "@typescript-eslint/parser": "^3.6.1",
