@@ -5,6 +5,7 @@ declare namespace Cypress {
     root: string;
     realm: string;
     redirect_uri: string;
+    path_prefix?: string;
   }
   interface Login {
     root: string;
