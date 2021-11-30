@@ -6,7 +6,7 @@
   "name": "cypress-keycloak",
   "module": "dist/index.esm.js",
   "description": "Cypress commands for Keycloak",
-  "repository": "https://github.com/babangsund/cypress-keycloak",
+  "repository": "git://github.com/babangsund/cypress-keycloak.git",
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
     "watch": "NODE_ENV=development rollup -c -w",
