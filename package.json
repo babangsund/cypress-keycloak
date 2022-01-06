@@ -1,12 +1,16 @@
 {
   "license": "MIT",
+<<<<<<< yanfali-pkce-s256-hack
   "version": "1.7.1",
+=======
+  "version": "1.8.0",
+>>>>>>> master
   "author": "babangsund",
   "main": "dist/index.js",
   "name": "cypress-keycloak",
   "module": "dist/index.esm.js",
   "description": "Cypress commands for Keycloak",
-  "repository": "https://github.com/babangsund/cypress-keycloak",
+  "repository": "git://github.com/babangsund/cypress-keycloak.git",
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
     "watch": "NODE_ENV=development rollup -c -w",
@@ -14,7 +18,7 @@
     "lint": "eslint src/"
   },
   "peerDependencies": {
-    "cypress": "^6.5.0"
+    "cypress": "^6.5.0 || ^7.0.0 || ^8.0.0 || ^9.0.0"
   },
   "types": "src/index.d.ts",
   "devDependencies": {
