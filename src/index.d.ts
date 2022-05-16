@@ -4,8 +4,10 @@ declare namespace Cypress {
   interface Logout {
     root: string;
     realm: string;
-    redirect_uri: string;
+    redirect_uri?: string;
     path_prefix?: string;
+    post_logout_redirect_uri?: string,
+    id_token_hint?: string;
   }
   interface Login {
     root: string;
@@ -21,7 +23,7 @@ declare namespace Cypress {
     otp_credential_id?: string | null;
   }
   interface Chainable {
-    logout({ root, realm, redirect_uri }: Logout): Chainable;
+    logout({ root, realm, redirect_uri, post_logout_redirect_uri, id_token_hint }: Logout): Chainable;
     login({
       root,
       realm,
