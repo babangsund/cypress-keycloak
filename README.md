@@ -32,7 +32,9 @@ Two `cy` commands have been added:
 - **`cy.logout({ ... })`**:
   - `root`: string
   - `realm`: string
-  - `redirect_uri`: string
+  - `redirect_uri`?: string, for Keycloak >= 18.0.0 use `post_logout_redirect_uri` instead
+  - `post_logout_redirect_uri`?: string, for Keycloak < 18.0.0 use `post_logout_redirect_uri` instead
+  - `id_token_hint`?: string
   - `path_prefix`?: string = "auth"
 - **`cy.login({ ... })`**:
   - `root`: string
@@ -96,7 +98,10 @@ describe('thing', () => {
     cy.logout({
       root: 'https://keycloak.babangsund.com',
       realm: 'stage',
-      redirect_uri: 'https://babangsund.com/',
+      // using Keycloak < 18.0.0:
+      // redirect_uri: 'https://babangsund.com/',
+      // using Keycloak >= 18.0.0:
+      post_logout_redirect_uri: 'https://babangsund.com/',
     });
   });
 });
@@ -138,13 +143,13 @@ describe('thing', () => {
 
 ### Credits
 
-cypress-keycloak is built and maintained by **babangsund**.  
-[@blog](https://babangsund.com/).  
-[@github](https://github.com/babangsund).  
+cypress-keycloak is built and maintained by **babangsund**.
+[@blog](https://babangsund.com/).
+[@github](https://github.com/babangsund).
 [@twitter](https://twitter.com/babangsund).
 
-login with OTP is contributed by **m4x3d**  
-[@gitlab](https://gitlab.com/m4x3d)  
-[@github](https://github.com/m4x3d)  
-[@medium](https://medium.com/@m4x3d)  
+login with OTP is contributed by **m4x3d**
+[@gitlab](https://gitlab.com/m4x3d)
+[@github](https://github.com/m4x3d)
+[@medium](https://medium.com/@m4x3d)
 [@linkedin](https://www.linkedin.com/in/max-friedrich-119852206/)
