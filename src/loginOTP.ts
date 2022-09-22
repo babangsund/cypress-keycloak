@@ -12,6 +12,7 @@ Cypress.Commands.add(
     path_prefix = 'auth',
     otp_secret,
     otp_credential_id = null,
+    kc_idp_hint,
   }) =>
     cy
       .request({
@@ -19,6 +20,7 @@ Cypress.Commands.add(
         qs: {
           client_id,
           redirect_uri,
+          kc_idp_hint,
           scope: 'openid',
           state: createUUID(),
           nonce: createUUID(),

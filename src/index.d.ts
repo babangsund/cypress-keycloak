@@ -17,6 +17,7 @@ declare namespace Cypress {
     client_id: string;
     path_prefix?: string;
     redirect_uri: string;
+    kc_idp_hint?: string;
   }
   interface LoginOTP extends Login {
     otp_secret: string;
@@ -31,6 +32,7 @@ declare namespace Cypress {
       password,
       client_id,
       redirect_uri,
+      kc_idp_hint,
     }: Login): Chainable;
     loginOTP({
       root,
@@ -40,6 +42,7 @@ declare namespace Cypress {
       client_id,
       redirect_uri,
       otp_secret,
+      kc_idp_hint,
     }: LoginOTP): Chainable;
   }
 }
