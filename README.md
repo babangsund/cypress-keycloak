@@ -143,13 +143,20 @@ describe('thing', () => {
 
 ### Credits
 
+#### Owner
+
 cypress-keycloak is built and maintained by **babangsund**.
 [@blog](https://babangsund.com/).
 [@github](https://github.com/babangsund).
 [@twitter](https://twitter.com/babangsund).
 
-login with OTP is contributed by **m4x3d**
-[@gitlab](https://gitlab.com/m4x3d)
-[@github](https://github.com/m4x3d)
-[@medium](https://medium.com/@m4x3d)
-[@linkedin](https://www.linkedin.com/in/max-friedrich-119852206/)
+#### Contributors
+- [m4xd](https://github.com/m4x3d)
+- Pascal Küsgen
+- Martin Guethle
+- Med Amine Amara
+- Oskar Thornblad
+- Kai
+- Raymon Ohmori
+- Robert Wysocki
+- Hussein Al Abry
