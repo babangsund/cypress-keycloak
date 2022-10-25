@@ -30,5 +30,9 @@
     "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-typescript": "^1.0.1",
     "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "base64-js": "^1.5.1",
+    "js-sha256": "^0.9.0"
   }
 }
