@@ -44,6 +44,7 @@ Four `cy` commands have been added:
   - `client_id`: string
   - `redirect_uri`: string
   - `path_prefix`?: string = "auth"
+  - `code_challenge_method`: string, to use PKCE set this to `S256`
 - **`cy.loginOTP({ ... })`**:
   - `root`: string
   - `realm`: string
