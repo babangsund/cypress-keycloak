@@ -155,7 +155,7 @@ cypress-keycloak is built and maintained by **babangsund**.
 - [m4xd](https://github.com/m4x3d)
 - Pascal Küsgen
 - Martin Guethle
-- Med Amine Amara
+- [Med Amine Amara](https://github.com/medamineamara)
 - Oskar Thornblad
 - Kai
 - Raymon Ohmori
