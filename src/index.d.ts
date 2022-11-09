@@ -23,6 +23,21 @@ declare namespace Cypress {
     otp_secret: string;
     otp_credential_id?: string | null;
   }
+  interface Register {
+    root: string;
+    realm: string;
+    client_id: string;
+    path_prefix?: string;
+    redirect_uri: string;
+    kc_idp_hint?: string;
+    username?: string;
+    email?: string;
+    password?: string;
+    passwordConfirm?: string;
+    firstName?: string;
+    lastName?: string;
+    additionalAttributes?: { [key: string]: any };
+  }
   interface Chainable {
     logout({ root, realm, redirect_uri, post_logout_redirect_uri, id_token_hint }: Logout): Chainable;
     login({
@@ -44,5 +59,20 @@ declare namespace Cypress {
       otp_secret,
       kc_idp_hint,
     }: LoginOTP): Chainable;
+    register({
+      root,
+      realm,
+      client_id,
+      path_prefix,
+      redirect_uri,
+      kc_idp_hint,
+      username,
+      email,
+      password,
+      passwordConfirm,
+      firstName,
+      lastName,
+      additionalAttributes,
+    }: Register): Chainable;
   }
 }

@@ -27,7 +27,7 @@ require('cypress-keycloak');
 
 ### Usage
 
-Two `cy` commands have been added:
+Four `cy` commands have been added:
 
 - **`cy.logout({ ... })`**:
   - `root`: string
@@ -54,6 +54,20 @@ Two `cy` commands have been added:
   - `path_prefix`?: string = "auth"
   - `otp_secret`: string
   - `otp_credential_id`?: string | null = null
+- **`cy.register({ ... })`**:
+  - `root`: string
+  - `realm`: string
+  - `client_id`: string
+  - `path_prefix`?: string = "auth"
+  - `redirect_uri`: string
+  - `kc_idp_hint`?: string
+  - `username`?: string
+  - `email`?: string
+  - `password`?: string
+  - `passwordConfirm`?: string
+  - `firstName`?: string
+  - `lastName`?: string
+  - `additionalAttributes`?: { [key: string]: any }
 
 ### Installation:
 
