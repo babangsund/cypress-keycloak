@@ -1,6 +1,6 @@
 {
   "license": "MIT",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "babangsund",
   "main": "dist/index.js",
   "name": "cypress-keycloak",
@@ -14,7 +14,7 @@
     "lint": "eslint src/"
   },
   "peerDependencies": {
-    "cypress": "^6.5.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0"
+    "cypress": "^6.5.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^12.0.0"
   },
   "types": "src/index.d.ts",
   "devDependencies": {
