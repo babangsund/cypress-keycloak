@@ -5,7 +5,7 @@ import typescript from 'rollup-plugin-typescript';
 import pkg from './package.json';
 
 const input = 'src/index.ts';
-const globals = { cypress: 'Cypress' };
+const globals = { cypress: 'Cypress', 'base64-js': 'base64-js', 'js-sha256': 'js-sha256'  };
 const external = Object.keys(globals);
 const license = {
   output: {
