@@ -25,9 +25,7 @@ Cypress.Commands.add(
       .then((response) => {
         const html = document.createElement('html');
         html.innerHTML = response.body;
-        const contentArea = html.getElementsByClassName(
-          'content-area'
-        )[0];
+        const contentArea = html.getElementsByClassName('content-area')[0];
 
         if (
           contentArea === undefined ||
