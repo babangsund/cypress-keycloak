@@ -6,13 +6,17 @@ Cypress.Commands.add(
     redirect_uri,
     post_logout_redirect_uri,
     id_token_hint,
+    client_id,
     path_prefix = 'auth',
   }) => {
-    const qs = post_logout_redirect_uri
-      ? { post_logout_redirect_uri, id_token_hint }
+    const qs: Record<string, string> = post_logout_redirect_uri
+      ? { post_logout_redirect_uri }
       : { redirect_uri };
     if (post_logout_redirect_uri && id_token_hint) {
       qs.id_token_hint = id_token_hint;
+    }
+    if (post_logout_redirect_uri && client_id) {
+      qs.client_id = client_id;
     }
 
     return cy
