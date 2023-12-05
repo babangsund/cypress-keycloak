@@ -18,6 +18,7 @@ declare namespace Cypress {
     path_prefix?: string;
     redirect_uri: string;
     kc_idp_hint?: string;
+    code_challenge_method?: string;
   }
   interface LoginOTP extends Login {
     otp_secret: string;
