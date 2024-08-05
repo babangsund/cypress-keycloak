@@ -1,3 +1,9 @@
+# This repository has been archived!
+
+Thank you to all that contributed. Unfortunately, I no longer have the time to maintain it.
+
+Please fork it for any further updates!
+
 # cypress-keycloak
 
 Cypress commands for Keycloak
