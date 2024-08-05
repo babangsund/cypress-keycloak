@@ -1,5 +1,7 @@
 # This repository has been archived!
 
+Just merged all open PRs and published v2.0.2, will we be the last version.
+
 Thank you to all that contributed. Unfortunately, I no longer have the time to maintain it.
 
 Please fork it for any further updates!
